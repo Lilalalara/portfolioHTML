@@ -290,21 +290,10 @@ section {
 .main-title h2 span {
   color: var(--color-secondary);
 }
-.main-title h2 .bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--color-grey-5);
-  transition: all 0.4s ease-in-out;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  font-weight: 800;
-  font-size: 6.3rem;
-}
 
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
@@ -315,7 +304,6 @@ section {
   grid-gap: 2rem;
 }
 .about-container .right-about .about-item {
-  width: 50%;
   border: 1px solid var(--color-grey-5);
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
@@ -355,7 +343,7 @@ section {
   background-color: var(--color-grey-5);
 }
 .about-container .left-about {
-  padding-right: 5rem;
+  padding-right: 0.5rem;
 }
 .about-container .left-about p {
   line-height: 2rem;
@@ -621,6 +609,7 @@ section {
 .contact-content .left-contact .contact-icon {
   display: flex;
   margin-top: 2rem;
+  justify-content: center;
 }
 .contact-content .left-contact .contact-icon a {
   display: flex;
@@ -632,7 +621,7 @@ section {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: 0 0.4rem;
+  margin: 0 0.8rem;
   transition: all 0.4s ease-in-out;
 }
 .contact-content .left-contact .contact-icon a:hover {
@@ -649,7 +638,7 @@ section {
 }
 .contact-content .right-contact {
   flex: 3;
-  margin-left: 3rem;
+  margin-left: 5rem;
 }
 .contact-content .right-contact .input-control {
   margin: 1.5rem 0;
@@ -677,21 +666,17 @@ section {
   display: flex;
   justify-content: flex-start;
 }
+.contact-content .right-contact .submit-btn button {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  padding: 0;
+  border: none;
+  background: none;
+}
 
 @media screen and (max-width: 620px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .about-container .right-about {
-    padding-top: 2.5rem;
-  }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-left: 0;
-  }
-
   .timeline {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
@@ -704,9 +689,6 @@ section {
 
   .main-title h2 {
     font-size: 2.5rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 3.1rem;
   }
 
   .section {
@@ -769,13 +751,17 @@ section {
   }
   .about-container .right-about {
     padding-top: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
   }
 
   .main-title h2 {
     font-size: 3.5rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 5rem;
   }
 
   .portfolios {
