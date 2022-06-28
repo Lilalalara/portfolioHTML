@@ -217,7 +217,7 @@ section {
   filter: grayscale(100%);
 }
 .header-content .left-header .image img:hover {
-  filter: grayscale(0);
+  width: 105%;
 }
 .header-content .right-header {
   display: flex;
@@ -412,6 +412,16 @@ section {
   transition: all 0.4s ease-in-out;
   width: 60%;
 }
+.about-stats .progress-bars .progress-bar .progress-con .progress:hover {
+  transition: all 0.4s ease-out;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
 .about-stats .progress-bars .progress-bar .progress-con .progress .beginner {
   width: 25%;
 }
@@ -432,9 +442,16 @@ section {
   padding-bottom: 3rem;
 }
 .timeline .timeline-item {
+  transition: all 0.4s ease-in-out;
   position: relative;
   padding-left: 3rem;
+  padding-bottom: 1rem;
   border-left: 1px solid var(--color-grey-5);
+}
+.timeline .timeline-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
 .timeline .timeline-item .timeline-icon {
   position: absolute;
@@ -489,6 +506,10 @@ section {
 .portfolios .portfolio-item {
   position: relative;
   border-radius: 15px;
+  border: 1px solid var(--color-grey-5);
+}
+.portfolios .portfolio-item .image {
+  height: 300px;
 }
 .portfolios .portfolio-item .image .image-title {
   position: absolute;
@@ -520,7 +541,7 @@ section {
   flex-direction: column;
   opacity: 0;
   transform: scale(0);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.55s ease-in-out;
 }
 .portfolios .portfolio-item .hover-items .technology-text {
   font-size: 1rem;
