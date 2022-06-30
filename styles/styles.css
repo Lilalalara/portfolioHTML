@@ -715,6 +715,10 @@ section {
   .section {
     padding: 2rem 2.5rem !important;
   }
+
+  .about-stats .progress-bars {
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 800px) {
   .controls {
@@ -772,7 +776,7 @@ section {
   }
   .about-container .right-about {
     padding-top: 2.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .about-container .left-about {
     padding-right: 0;
